@@ -1,0 +1,15 @@
+name: LotteryBan
+main: com.sinndevelopment.lotteryban.LotteryBan
+version: 1.8.3
+author: Sinn Development
+softdepend: [Lottery]
+commands:
+    lottoban:
+        description: Ban/Unban a player from buying lottery tickets
+        usage: /<command>
+        permission: lotteryban.ban
+        permission-message: You do not have permission
+permissions:
+    lotteryban.ban:
+        default: op
+        description: Allows use of /lottoban
