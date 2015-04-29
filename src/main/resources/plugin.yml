@@ -2,7 +2,7 @@ name: LotteryBan
 main: com.sinndevelopment.lotteryban.LotteryBan
 version: 1.8.3
 author: Sinn Development
-softdepend: [Lottery]
+softdepend: [Lottery,Essentials]
 commands:
     lottoban:
         description: Ban/Unban a player from buying lottery tickets
