@@ -51,10 +51,12 @@ public class LotteryBan extends JavaPlugin implements Listener
                     target.setMetadata("LotteryBanned", new FixedMetadataValue(this, false));
                     sender.sendMessage(ChatColor.GOLD + target.getName() + " has been Lottery Unbanned");
                     getServer().getLogger().info(target.getName() + " has been Lottery Unbanned by " + sender.getName());
+                    return true;
                 } else {
                     target.setMetadata("LotteryBanned", new FixedMetadataValue(this, true));
                     sender.sendMessage(ChatColor.GOLD + target.getName() + " has been Lottery Banned");
                     getServer().getLogger().info(target.getName() + " has been Lottery Banned by " + sender.getName());
+                    return true;
                 }
             }
 
@@ -65,12 +67,14 @@ public class LotteryBan extends JavaPlugin implements Listener
                     offlineTarget.getBase().setMetadata("LotteryBanned", new FixedMetadataValue(this, false));
                     sender.sendMessage(ChatColor.GOLD + offlineTarget.getName() + " has been Lottery Unbanned");
                     getServer().getLogger().info(offlineTarget.getName() + " has been Lottery Unbanned by " + sender.getName());
+                    return true;
                 }
                 else
                 {
                     offlineTarget.getBase().setMetadata("LotteryBanned", new FixedMetadataValue(this, true));
                     sender.sendMessage(ChatColor.GOLD + offlineTarget.getName() + " has been Lottery Banned");
                     getServer().getLogger().info(offlineTarget.getName() + " has been Lottery Banned by " + sender.getName());
+                    return true;
                 }
             }
             sender.sendMessage(ChatColor.RED+ "Invalid target player.");
